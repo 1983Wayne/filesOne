@@ -1,0 +1,4 @@
+;;; ( SIMPLY SCHEME EXERCISE 4.10 ) Create a procedure that will give you a whole dollar amount for a tip using 'ceiling'.
+
+(define (tip total)
+  (ceiling (* total 0.15)))

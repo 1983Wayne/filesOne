@@ -1,0 +1,4 @@
+;;; ( SIMPLY SCHEME EXERCISE 5.19 ) Create a procedure that will insert the word 'and' in the correct spot of a sentence of items.
+
+(define (insert-and sent)
+  (se (bl sent) 'and (last sent)))

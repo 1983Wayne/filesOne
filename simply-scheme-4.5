@@ -1,0 +1,7 @@
+;;; ( SIMPLY SCHEME EXERCISE 4.5 ) Create a function that will convert Fahrenheit to Celsius and another one for vice versa.
+
+(define (cel-fahr degrees)
+  (+ (* (/ 9 5) degrees) 32))
+
+(define (fahr-cel degrees)
+  (* (- degrees 32) (/ 5 9)))

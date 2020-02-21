@@ -1,0 +1,4 @@
+;;; ( SIMPLY SCHEME EXERCISE 5.14 ) Create a procedure that will give you the third letter from a word or the third word in a sentence
+
+(define (third something)
+  (first (bf (bf something))))

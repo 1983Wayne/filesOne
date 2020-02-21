@@ -1,0 +1,4 @@
+;;; ( SIMPLY SCHEME EXERCISE 5.17 ) Create a procedure that will give a person a knight's title.
+
+(define (knight sent)
+  (se 'sir sent))

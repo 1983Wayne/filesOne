@@ -1,0 +1,4 @@
+;;; ( SIMPLY SCHEME EXERCISE 5.14 ) Create a procedure that will give you the first two letters of a word back as a word.
+
+(define (first-two wd)
+  (word (first wd) (first (bf wd))))

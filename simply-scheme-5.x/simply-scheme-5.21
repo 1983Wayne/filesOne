@@ -1,0 +1,8 @@
+;;; ( SIMPLY SCHEME EXERCISE 5.21 ) Create a procedure that will change statements into a 
+;;; question by swapping first two words and putting a question mark at the end.
+
+(define (query sent)
+  (se (first (bf sent)) 
+      (first sent) 
+      (bf (bf (bl sent))) 
+      (word (last sent) '?)))

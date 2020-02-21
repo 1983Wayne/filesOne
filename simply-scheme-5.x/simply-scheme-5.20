@@ -1,0 +1,4 @@
+;;; ( SIMPLY SCHEME EXERCISE 5.20 ) Create a procedure that will give you someone's middle name from a sentence of the full name.
+
+(define (middle-names sent)
+  (se (bf (bl sent))))

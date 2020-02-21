@@ -1,0 +1,7 @@
+;;; ( SIMPLY SCHEME EXERCISE 4.6 ) Create a function that will give the fourth power of a number.  
+;;; Do this once with the multiplication function and then using the square function.
+
+(define (fourth x) (* x x x x))
+
+(define (square x) (* x x))
+(define (fourth2 x) (* (square x) (square x)))

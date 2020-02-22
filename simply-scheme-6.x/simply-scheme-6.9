@@ -1,0 +1,7 @@
+;;; ( SIMPLY SCHEME EXERCISE 6.5 ) Create a procedure that will return the plural of some choice words types or the singular of it.
+
+(define (this-many number wd)
+  (cond ((> number 1) (cond ((equal? (last wd) 's) (se number (word wd 'es)))
+                            ((equal? (last wd) 'y) (se number (word (bl wd) 'ies)))
+                            (else (se number (word wd 's)))))
+         (else (se number wd))))

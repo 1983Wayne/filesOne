@@ -1,0 +1,8 @@
+;;; ( SIMPLY SCHEME EXERCISE 6.5 ) Create a procedure that will return the 'type' of whatever the argument is.
+
+(define (type-of thing)
+  (cond ((number? thing) 'number)
+        ((boolean? thing) 'boolean)
+        ((word? thing) 'word)
+        ((sentence? thing) 'sentence)
+        (else 'huh?)))

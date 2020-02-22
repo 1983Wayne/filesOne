@@ -1,0 +1,17 @@
+;;; ( SIMPLY SCHEME EXERCISE 6.5 ) Create a procedure that will give the hour value of 24 
+;;; hour time when given 12 hour time, and vice versa.
+
+(define (european-time amtime)
+  
+  (cond ((equal? (first amtime) '12) (if (equal? (last amtime) 'pm)
+                                         '12
+                                         '0))
+        ((equal? (last amtime) 'pm) (+ (first amtime) 12))
+        (else (first amtime))))
+
+(define (american-time eurotime)
+
+  (cond ((equal? (first eurotime) '0) '(12 am))
+        ((equal? (first eurotime) '12) '(12 pm))
+        ((> eurotime 12) (se (- eurotime 12) 'pm))
+        (else (se eurotime 'am))))

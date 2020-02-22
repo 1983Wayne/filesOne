@@ -1,0 +1,6 @@
+;;; ( SIMPLY SCHEME EXERCISE 6.10 ) Create a procedure that will sort two numbers from lowest to highest in the sentence.
+
+(define (sort2 numbers)
+  (if (> (first numbers) (last numbers))
+      (se (last numbers) (first numbers))
+      numbers))

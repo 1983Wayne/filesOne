@@ -17,5 +17,5 @@
         ((equal? wd 'zero) 'zeros)
         ((equal? (last wd) 'o) (word wd 'es))
         ((equal? (last wd) 'f) (word (bl wd) 'ves))
-        ((equal? (last wd) 'fe) (word (bl (bl wd)) 'ves))
+        ((and (equal? (last wd) 'e) (equal? (last (bl wd)) 'f)) (word (bl (bl wd)) 'ves))
         (else (word wd 's))))

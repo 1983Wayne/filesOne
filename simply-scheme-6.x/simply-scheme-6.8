@@ -1,0 +1,8 @@
+;;; ( SIMPLY SCHEME EXERCISE 6.5 ) Create a procedure that will give the indefinite article and the word back, ignoring silent consonants.
+
+(define (vowel? letter) (member? letter 'aeiou))
+
+(define (indef-article wd)
+  (if (vowel? (first wd))
+      (se 'an wd)
+      (se 'a wd)))

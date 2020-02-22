@@ -1,0 +1,21 @@
+;;; ( SIMPLY SCHEME EXERCISE 6.12 ) Create a procedure that will pluralize as many irregular nouns as you have patience for.
+
+(define (vowel? letter) (member? letter 'aeiou))
+
+(define (plural wd)
+  (cond ((equal? (last wd) 'x) (word wd 'es))
+        ((equal? (last wd) 's) (word wd 'es))
+        ((and (equal? (last wd) 'y) (vowel? (first (bl wd)))) (word wd 's))
+        ((equal? (last wd) 'y) (word (bl wd) 'ies))
+        ((equal? wd 'goose) 'geese)
+        ((equal? wd 'moose) 'meese)
+        ((equal? wd 'deer) 'deer)
+        ((equal? wd 'fish) 'fish)
+        ((equal? wd 'proof) 'proofs)
+        ((equal? wd 'roof) 'roofs)
+        ((equal? wd 'piano) 'pianos)
+        ((equal? wd 'zero) 'zeros)
+        ((equal? (last wd) 'o) (word wd 'es))
+        ((equal? (last wd) 'f) (word (bl wd) 'ves))
+        ((equal? (last wd) 'fe) (word (bl (bl wd)) 'ves))
+        (else (word wd 's))))

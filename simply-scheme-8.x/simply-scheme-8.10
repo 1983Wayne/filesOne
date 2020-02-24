@@ -1,0 +1,10 @@
+;;; ( SIMPLY SCHEME EXERCISE 8.10 ) Create a procedure that takes a predicate argument and a sentence and returns 
+;;; whether or not that the predicate holds true for every word in that sentence.
+
+(define (true-for-all predicate sent)
+  (if (equal? (count sent) (count (keep predicate sent))) 
+  #t 
+  #f))
+
+(define (startswitha? wd)
+  (equal? (first wd) 'a))

@@ -1,0 +1,8 @@
+;;; ( SIMPLY SCHEME EXERCISE 8.12 ) Make a program that counts the 'um's in a sentence.
+
+(define (is-this-an-um? wd)
+  (equal? wd 'um))
+
+(define (count-ums sent)
+  (let ((keepums (keep is-this-an-um? sent)))
+  (count keepums)))

@@ -1,0 +1,5 @@
+;;; ( SIMPLY SCHEME EXERCISE 8.14 ) Create a procedure that returns a subword of a word argument between start and end point arguments.
+
+(define (subword wd start end)
+  (accumulate word ((repeated bf (- start 1))
+                   ((repeated bl (- (count wd) end)) wd))))

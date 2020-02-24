@@ -1,0 +1,14 @@
+;;; ( SIMPLY SCHEME EXERCISE 8.13 ) Create a procedure that turns a phone number word into the digits from a keypad.
+
+(define (unspell-cond letter)
+  (cond ((member? letter 'abc) 2)
+        ((member? letter 'def) 3)
+        ((member? letter 'ghi) 4)
+        ((member? letter 'jkl) 5)
+        ((member? letter 'mno) 6)
+        ((member? letter 'pqrs) 7)
+        ((member? letter 'tuv) 8)
+        (else '9)))
+
+(define (phone-unspell wd)
+  (accumulate word (every unspell-cond wd)))

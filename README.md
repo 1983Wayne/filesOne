@@ -2,8 +2,7 @@
 
 The book is freely available here: http://www.cs.berkeley.edu/~bh/ss-toc2.html
 
-Yet, if you're like me you need a physical copy.  I found a copy on Abe books for a really good deal, and if I didn't find it there...
-Barnes and Noble had the next best deal.  Not always Amazon!
+Yet, if you're like me you need a physical copy, I found a copy on Abe books for a really good deal. Barnes and Noble had the next best deal, so check around because the best deal isn't always Amazon!
 
 If you're not bound by needing a hard copy in front of you, the link will take you right to the website with the book.
 

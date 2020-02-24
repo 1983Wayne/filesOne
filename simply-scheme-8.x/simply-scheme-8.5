@@ -1,0 +1,6 @@
+;;; ( SIMPLY SCHEME EXERCISE 8.5 ) Create a beatles-transform procedure that takes a procedure as an argument and transforms the names.
+
+(define beatles '(john paul george ringo))
+
+(define (transform-beatles procedure)
+  (se (every procedure beatles)))

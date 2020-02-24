@@ -1,0 +1,6 @@
+;;; ( SIMPLY SCHEME EXERCISE 8.4 ) Create a procedure that takes a predicate argument and selects the correct beatle(s) from the sentence.
+
+(define beatles '(john paul george ringo))
+
+(define (choose-beatles predicate)
+  (se (keep predicate beatles)))

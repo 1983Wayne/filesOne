@@ -1,0 +1,14 @@
+;;; ( SIMPLY SCHEME EXERCISE 8.8 ) Create a procedure that exaggerates a bunch of words in an argument sentence.
+
+(define (exaggerate-helper wd)
+  (cond ((number? wd) (* wd 16))
+        ((equal? wd 'good) 'great)
+        ((equal? wd 'bad) 'terrible)
+        ((equal? wd 'potstickers) 'dumplings)
+        ((equal? wd 'super) 'stupendous)
+        ((equal? wd 'smart) 'einstein)
+        ((equal? wd 'fart) 'dynamite-blast)
+        (else wd)))
+
+(define (exaggerate sent)
+  (every exaggerate-helper sent))

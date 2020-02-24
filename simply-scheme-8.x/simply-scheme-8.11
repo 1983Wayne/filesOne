@@ -1,0 +1,21 @@
+;;; ( SIMPLY SCHEME EXERCISE 8.11 ) Create a procedure that will return your gpa from a sentence of grades.
+
+(define (grade-modifier symbol)
+  (cond ((equal? symbol '+) 0.33)
+        ((equal? symbol '-) (- 0.33))
+        (else 0)))
+                             
+(define (base-grade letter)
+  (cond ((equal? letter 'a) 4.0)
+        ((equal? letter 'b) 3.0)
+        ((equal? letter 'c) 2.0)
+        ((equal? letter 'd) 1.0)
+        (else 0.0)))
+
+(define (gpa-helper grade)
+  (if (equal? (count grade) 2)
+      (+ (base-grade (first grade)) (grade-modifier (last grade)))
+      (base-grade grade)))
+   
+(define (gpa sent)
+  (/ (accumulate + (every gpa-helper sent)) (count sent)))

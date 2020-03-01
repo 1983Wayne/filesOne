@@ -1,0 +1,5 @@
+;;; ( SIMPLY SCHEME EXERCISE 9.7 ) Write a procedure that takes a letter and a sentence as arguments and returns a sentence 
+;;; containing the words that have that letter in it.
+
+(define (letterwords letter sent)
+  (every (lambda (wd) (se (if (member? letter wd) wd '()))) sent))

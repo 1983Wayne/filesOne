@@ -1,0 +1,4 @@
+;;; ( SIMPLY SCHEME EXERCISE 9.5 ) Write 'prepend-every' to add a word or letter to every word in a sentence.
+
+(define (prepend-every wd1 sent)
+  (every (lambda (wd2) (word wd1 wd2)) sent))

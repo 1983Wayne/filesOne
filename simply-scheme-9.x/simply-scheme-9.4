@@ -1,0 +1,10 @@
+;;; ( SIMPLY SCHEME EXERCISE 9.4 ) Fix this program so that it works:
+
+;;; (define (who sent)
+;;;   (every describe '(pete roger john keith)))
+;;;
+;;;  (define (describe person)
+;;;   (se person sent))
+
+(define (who sent)
+  (every (lambda (name) (se name sent)) '(pete roger john keith)))

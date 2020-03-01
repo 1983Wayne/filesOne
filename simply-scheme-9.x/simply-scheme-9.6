@@ -1,0 +1,5 @@
+;;; ( SIMPLY SCHEME EXERCISE 9.6 ) Write sentence-version where you have a function that takes one word as an argument
+;;; and returns a second function 'g' that will return the sentence with the first function applied to it.
+
+(define (sentence-version function)
+  (lambda (sent) (every function sent)))

@@ -1,0 +1,8 @@
+;;; ( SIMPLY SCHEME EXERCISE 9.14 ) Make a procedure with two word and one sentence argument. It will replace every instance of the first
+;;; word in the sentence with the second word.
+
+(define (substitute word-to-replace word-to-check sent)
+  (every (lambda (wd) (if (equal? wd word-to-check)
+                          word-to-replace
+                          wd))
+         sent))

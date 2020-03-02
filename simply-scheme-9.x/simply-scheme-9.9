@@ -1,0 +1,8 @@
+;;; ( SIMPLY SCHEME EXERCISE 9.9 ) Make a procedure common-words that will display the common words in two argument sentences.
+
+(define (common-words sent1 sent2)
+  (every (lambda (wd) (se (if (and (member? wd sent1)
+                                (member? wd sent2))
+                           wd
+                           '())))
+         sent1))

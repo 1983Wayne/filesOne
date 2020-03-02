@@ -1,0 +1,9 @@
+;; ( SIMPLY SCHEME EXERCISE 9.8 ) Create a procedure that takes a secret word and some guesses and displays the state of the game.
+
+(define (hang-letter letter guesses)
+  (if (member? letter guesses)
+      letter
+      '_))
+
+(define (hangman wd guesses)
+  (accumulate word (every (lambda (letter) (hang-letter letter guesses)) wd)))

@@ -1,0 +1,8 @@
+;;; ( SIMPLY SCHEME EXERCISE 9.12 ) Make a procedure that gives all the words of one argument sentence that have the first and last 
+;;; letters that are the same.
+
+(define (first-last sent)
+  (every (lambda (wd) (if (equal? (first wd) (last wd))
+                          wd
+                          '()))
+         sent))

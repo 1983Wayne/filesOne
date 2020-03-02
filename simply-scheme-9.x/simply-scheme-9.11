@@ -1,0 +1,9 @@
+;;; ( SIMPLY SCHEME EXERCISE 9.11 ) Write a two argument procedure that changes the first sentence by swapping the numbers from it
+;;; with the same item number in the second sentence.
+
+(define (unabbrev sent1 sent2)
+  (every (lambda (wd) (if (number? wd)
+                          (item wd sent2)
+                          wd))
+         sent1))
+

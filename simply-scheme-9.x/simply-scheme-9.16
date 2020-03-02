@@ -1,0 +1,6 @@
+;;; ( SIMPLY SCHEME EXERCISE 9.16 ) Create the procedure that takes one procedure as it's argument whose domain is words/numbers.
+
+(define (aplize procedure)
+  (lambda (thing) (if (> (count thing) 1)
+                       (every procedure thing)
+                       (procedure thing))))

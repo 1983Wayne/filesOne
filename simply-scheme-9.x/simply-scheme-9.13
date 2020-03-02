@@ -1,0 +1,4 @@
+;;; ( SIMPLY SCHEME EXERCISE 9.13 ) Make a procedure that will return f(g(x)) out of two arguments 'f' and 'g'.
+
+(define (compose f g)
+  (lambda (x) (f (g x))))

@@ -1,0 +1,6 @@
+;;; ( SIMPLY SCHEME EXERCISE 9.15 ) Make a type check procedure that has a function and predicate as arguments.  
+
+(define (type-check func pred)
+  (lambda (x) (if (pred x)
+                  (func x)
+                  #f)))

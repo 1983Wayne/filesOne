@@ -1,0 +1,7 @@
+;;; ( SIMPLY SCHEME EXERCISE 9.10 ) Write a procedure that counts how many times the first argument appears in the second argument.
+
+(define (appearances thing sent)
+  (count (every (lambda (wd) (if (equal? wd thing)
+                              wd
+                              '()))
+                sent)))

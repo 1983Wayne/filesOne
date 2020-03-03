@@ -6,8 +6,4 @@ Yet, if you're like me you need a physical copy, I found a copy on Abe books for
 
 If you're not bound by needing a hard copy in front of you, the link will take you right to the website with the book.
 
-This is the best book I have ever read and it's turning out to be a really good introduction to programming in general.  They do say
-that they would like to see you move onto SICP afterwards, but I feel like I am going to try to finish all the Exercism projects first.
-
-I also ordered a book called 'Programming in Scheme' by Eisner and may work through that before SICP.  If anyone has finished that book,
-maybe they can do a review of it on Amazon or something?
+This is the first time I've learned anything about programming so it may be that you find simpler, better looking solutions.  It would be cool to see this in about ten years time to see everything again, so that's the main point of this code bank.

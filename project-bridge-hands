@@ -1,0 +1,33 @@
+;;; Create a program that scores a hand of Bridge cards.
+
+
+(define (card-val card)
+  (cond ((equal? (bf card) 'a) 4)
+        ((equal? (bf card) 'k) 3)
+        ((equal? (bf card) 'q) 2)
+        ((equal? (bf card) 'j) 1)
+        (else 0)))
+
+(define (high-card-points hand)
+  (accumulate + (every (lambda (card) (card-val card)) hand)))
+
+(define (count-suit suit hand)
+  (accumulate + (every (lambda (card) (if (equal? suit (first card))
+                                          1
+                                          0))
+                       hand)))
+
+(define (suit-counts hand)
+  (se (count-suit 's hand) (count-suit 'h hand) (count-suit 'c hand) (count-suit 'd hand)))
+
+(define (suit-dist-points number)
+  (cond ((equal? number 2) 1)
+        ((equal? number 1) 2)
+        ((equal? number 0) 3)
+        (else 0)))
+
+(define (hand-dist-points hand)
+  (accumulate + (every (lambda (suit-count) (suit-dist-points suit-count)) (suit-counts hand))))
+
+(define (bridge-val hand)
+  (accumulate + (se (hand-dist-points hand) (high-card-points hand)))) 

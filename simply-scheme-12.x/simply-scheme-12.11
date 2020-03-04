@@ -1,0 +1,6 @@
+;;; ( SIMPLY SCHEME EXERCISE 12.11 ) Make the 'count' procedure that returns the amount of words in a sentence or letters in a word.
+
+(define (count thing)
+  (if (empty? thing)
+      0
+      (+ 1 (count (bl thing)))))

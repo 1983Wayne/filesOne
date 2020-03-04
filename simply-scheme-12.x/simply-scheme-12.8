@@ -1,0 +1,6 @@
+;;; ( SIMPLY SCHEME EXERCISE 12.8 ) Write a procedure that returns only the numbers in a sentence.
+
+(define (numbers sent)
+  (cond ((equal? (count sent) 0) '())
+        ((number? (first sent)) (se (first sent) (numbers (bf sent))))
+        (else (numbers (bf sent)))))

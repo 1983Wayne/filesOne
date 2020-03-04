@@ -1,0 +1,6 @@
+;;; ( SIMPLY SCHEME EXERCISE 11.7 ) Write a procedure that takes an amount argument and a word argument copying that many times.
+
+(define (copies times wd)
+  (if (equal? times 0)
+      '()
+      (se wd (copies (- times 1) wd))))

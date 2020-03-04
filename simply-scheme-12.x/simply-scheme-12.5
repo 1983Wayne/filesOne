@@ -1,0 +1,9 @@
+;;; ( SIMPLY SCHEME EXERCISE 12.5 ) Remake the exaggerate procedure that exaggerates sentences with recursion.
+
+(define (exaggerate sent)
+  (cond ((equal? (count sent) 0) '())
+        ((number? (first sent)) (se (* (first sent) 2) (exaggerate (bf sent))))
+        ((equal? (first sent) 'good) (se 'great (exaggerate (bf sent))))
+        ((equal? (first sent) 'bad) (se 'terrible (exaggerate (bf sent))))
+        ((equal? (first sent) 'crazy) (se 'nuts (exaggerate (bf sent))))
+        (else (se (first sent) (exaggerate (bf sent))))))

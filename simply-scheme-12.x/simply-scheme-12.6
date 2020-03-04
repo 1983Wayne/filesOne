@@ -1,0 +1,23 @@
+;;; ( SIMPLY SCHEME EXERCISE 12.6 ) Write the gpa procedure using recursion instead of higher-order functions.
+
+(define (base-grade letter)
+  (cond ((equal? letter 'A) 4)
+        ((equal? letter 'B) 3)
+        ((equal? letter 'C) 2)
+        ((equal? letter 'D) 1)
+        (else 0)))
+
+(define (grade-modifier last)
+  (cond ((equal? last '+) 0.33)
+        ((equal? last '-) -0.33)
+        (else 0)))
+
+(define (gpa-helper grades)
+  (if (equal? (count grades) 0)
+      0
+      (+ (base-grade (first (first grades)))
+         (grade-modifier (last (first grades)))
+         (gpa-helper (bf grades)))))
+   
+(define (gpa grades)
+  (/ (gpa-helper grades) (count grades)))

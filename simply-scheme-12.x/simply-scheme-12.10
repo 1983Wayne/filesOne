@@ -1,0 +1,6 @@
+;;; ( SIMPLY SCHEME EXERCISE 12.10 ) Make a procedure that removes all instances of a word argument from a sentence argument.
+
+(define (remove wd sent)
+  (cond ((equal? (count sent) 0) '())
+        ((equal? wd (first sent)) (se (remove wd (bf sent))))
+        (else (se (first sent) (remove wd (bf sent))))))

@@ -1,0 +1,10 @@
+;;; ( SIMPLY SCHEME EXERCISE 12.7 ) Write a procedure that spells out the digits of a number.
+
+(define (spell-digit digit)
+  (item (+ 1 digit)
+        '(zero one two three four five six seven eight nine)))
+
+(define (spell-number digits)
+  (if (equal? (count digits) 0)
+      '()
+      (se (spell-digit (first digits)) (spell-number (bf digits)))))

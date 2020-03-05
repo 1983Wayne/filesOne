@@ -1,0 +1,6 @@
+;;; ( SIMPLY SCHEME EXERCISE 14.7 ) Create a procedure that returns the differences between adjacent sentence elements.
+
+(define (differences sent)
+  (if (equal? (count sent) 1)
+      '()
+      (se (- (first (bf sent)) (first sent)) (differences (bf sent)))))

@@ -1,0 +1,6 @@
+;;; ( SIMPLY SCHEME EXERCISE 14.6 ) Make the predicate 'member?'
+
+(define (member? item things)
+  (cond ((empty? things) #f)
+        ((equal? item (first things)) #t)
+        (else (member? item (bf things)))))

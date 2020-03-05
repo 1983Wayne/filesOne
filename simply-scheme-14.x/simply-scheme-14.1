@@ -1,0 +1,6 @@
+;;; ( SIMPLY SCHEME EXERCISE 14.1 ) Write a recursive procedure that will take one instance of a word from a sentence.
+
+(define (remove-once wd sent)
+  (cond ((empty? sent) '())
+        ((equal? (first sent) wd) (se (bf sent)))
+        (else (se (first sent) (remove-once wd (bf sent))))))

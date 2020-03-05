@@ -1,0 +1,4 @@
+;;; ( SIMPLY SCHEME EXERCISE 14.5 ) Write a procedure that counts the total letters in a sentence.
+
+(define (letter-count sent)
+  (accumulate + (every (lambda (word) (count word)) sent)))

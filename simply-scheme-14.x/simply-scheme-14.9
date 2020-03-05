@@ -1,0 +1,9 @@
+;;; ( SIMPLY SCHEME EXERCISE 14.9 ) Make a procedure that takes a word and sentence and will tell you where in the sentence it is.
+
+(define (location wd sent)
+  (location-helper 1 wd sent))
+
+(define (location-helper n wd sent)
+  (cond ((empty? sent) #f)
+        ((equal? wd (first sent)) n)
+        (else (location-helper (+ n 1) wd (bf sent)))))

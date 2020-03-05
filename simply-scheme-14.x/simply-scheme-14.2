@@ -1,0 +1,8 @@
+;;; ( SIMPLY SCHEME EXERCISE 14.2 ) Write a recursive procedure that spells an argument word a letter at a time in a sentence.
+
+(define (up-helper amount wd)
+  (if (equal? amount 0) wd
+      (se ((repeated bl amount) wd) (up-helper (- amount 1) wd))))
+
+(define (up wd)
+  (up-helper (- (count wd) 1) wd))

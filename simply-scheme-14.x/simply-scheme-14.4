@@ -1,0 +1,9 @@
+;;; ( SIMPLY SCHEME EXERCISE 14.4 ) Write a recursive procedure that returns the odds of a sentence.
+
+(define (odds sent)
+  (odds-helper 1 sent))
+
+(define (odds-helper n sent)
+  (cond ((empty? sent) '())
+        ((even? n) (se (odds-helper (+ n 1) (bf sent))))
+        (else (se (first sent) (odds-helper (+ n 1) (bf sent))))))

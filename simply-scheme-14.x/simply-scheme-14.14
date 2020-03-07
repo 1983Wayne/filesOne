@@ -1,0 +1,9 @@
+;;; ( SIMPLY SCHEME EXERCISE 14.14 ) Create a predicate that returns true if two argument sentences have the same number of
+;;; words in each of them with the same number of letters in each pair of words.
+
+(define (same-shape? sent1 sent2)
+  (if (equal? (count sent1) (count sent2))
+      (cond ((and (empty? sent1) (empty? sent2)) #t)
+            ((equal? (count (first sent1)) (count (first sent2))) (same-shape? (bf sent1) (bf sent2)))
+            (else #f))
+      #f))

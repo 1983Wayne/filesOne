@@ -1,0 +1,11 @@
+;;; ( SIMPLY SCHEME EXERCISE 14.13 ) Fix 'pigl' so that if no vowels are found, it'll still work properly.
+
+(define (any-vowels? wd)
+  (not (empty? (keep vowel? wd))))
+
+(define (vowel? letter) (member? letter 'aeiou))
+
+(define (pigl wd)
+  (cond ((vowel? (first wd)) (word wd 'ay))
+        ((any-vowels? wd) (pigl (word (bf wd) (first wd))))
+        (else (word wd 'ay))))

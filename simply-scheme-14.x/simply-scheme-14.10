@@ -1,0 +1,6 @@
+;;; ( SIMPLY SCHEME EXERCISE 14.10 ) Make the 'count-adjacent-dups' procedure that counts adjacent duplicates.
+
+(define (count-adjacent-dups sent)
+  (cond ((equal? (count sent) 1) 0)
+        ((equal? (first sent) (first (bf sent))) (+ 1 (count-adjacent-dups (bf sent))))
+        (else (count-adjacent-dups (bf sent)))))

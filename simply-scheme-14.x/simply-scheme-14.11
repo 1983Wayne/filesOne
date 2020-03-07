@@ -1,0 +1,6 @@
+;;; ( SIMPLY SCHEME EXERCISE 14.11 ) Create the 'remove-adjacent-dups' procedure that removes adjacent duplicates in a sentence.
+
+(define (remove-adjacent-dups sent)
+  (cond ((<= (count sent) 1) sent)
+        ((equal? (first sent) (first (bf sent))) (se (remove-adjacent-dups (bf sent))))
+        (else (se (first sent) (remove-adjacent-dups (bf sent))))))

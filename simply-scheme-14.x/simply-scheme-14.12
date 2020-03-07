@@ -1,0 +1,6 @@
+;;; ( SIMPLY SCHEME EXERCISE 14.12 ) Make procedure that tells you whether a the next number is a square of the one before it in a sent.
+
+(define (progressive-squares sent)
+  (cond ((equal? (count sent) 1) #t)
+        ((equal? (first sent) (sqrt (first (bf sent)))) (progressive-squares (bf sent)))
+        (else #f)))

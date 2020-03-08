@@ -1,0 +1,5 @@
+;;;  ( SIMPLY SCHEME EXERCISE 17.5 ) Make a procedure to get the maximum of a set of numbers.
+
+(define (maximum number . rest-of-numbers)
+  (if (null? rest-of-numbers) number
+      (apply maximum (cons (max2 number (car rest)) (cdr rest)))))

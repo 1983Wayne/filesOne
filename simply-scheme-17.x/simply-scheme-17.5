@@ -1,8 +1,0 @@
-;;; ( SIMPLY SCHEME EXERCISE 17.5 ) Create a procedure that tells you what the largest number is.
-
-(define (max number . rest-of-numbers)
-  (cond ((null? rest-of-numbers) number)
-        ((> (length rest-of-numbers) 0) (apply max rest-of-numbers))
-        ((> (car rest-of-numbers) number)
-         (apply max rest-of-numbers))
-        (else number)))

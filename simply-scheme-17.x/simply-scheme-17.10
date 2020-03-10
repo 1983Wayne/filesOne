@@ -1,0 +1,5 @@
+;;;  ( SIMPLY SCHEME EXERCISE 17.10 ) Make the 'length' procedure.
+
+(define (leength lst)
+  (cond ((null? lst) 0)
+        (else (+ 1 (cdr lst)))))

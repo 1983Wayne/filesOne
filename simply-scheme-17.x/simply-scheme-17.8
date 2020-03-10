@@ -1,0 +1,6 @@
+;;;  ( SIMPLY SCHEME EXERCISE 17.8 ) Write 'member'.
+
+(define (memberino something lst)
+  (cond ((null? lst) #f)
+        ((equal? something (car lst)) #t)
+        (else (memberino something (cdr lst)))))

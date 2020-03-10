@@ -1,0 +1,6 @@
+;;;  ( SIMPLY SCHEME EXERCISE 17.9 ) Make the 'list-ref' procedure.
+
+(define (list-reef lst number)
+  (cond ((null? lst) #f)
+        ((= number 0) (car lst))
+        (else (list-reef (cdr lst) (- number 1)))))

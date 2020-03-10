@@ -2,4 +2,4 @@
 
 (define (maximum number . rest-of-numbers)
   (if (null? rest-of-numbers) number
-      (apply maximum (cons (max2 number (car rest)) (cdr rest)))))
+      (apply maximum (cons (max2 number (car rest-of-numbers)) (cdr rest-of-numbers)))))

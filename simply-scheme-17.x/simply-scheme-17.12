@@ -1,0 +1,6 @@
+;;;  ( SIMPLY SCHEME EXERCISE 17.12 ) Make a procedure that takes a list with sublists (or not) and makes one nice list with it.
+
+(define (flatten lst)
+  (cond ((null? lst) '())
+        ((word? (car lst)) (append (list (car lst)) (flatten (cdr lst))))
+        (else (append (car lst) (flatten (cdr lst))))))

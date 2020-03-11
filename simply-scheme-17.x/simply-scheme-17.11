@@ -1,0 +1,10 @@
+;;;  ( SIMPLY SCHEME EXERCISE 17.11 ) Make a procedure that checks if one element from a list is before another.
+
+(define (counter lst n element)
+  (cond ((equal? element (car lst)) n)
+        ((null? lst) n)
+        (else (counter (cdr lst) (+ n 1) element))))
+
+(define (before-in-list? lst element1 element2)
+  (cond ((< (counter lst 0 element1) (counter lst 0 element2)) #t)
+        (else #f)))

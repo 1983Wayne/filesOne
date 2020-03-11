@@ -1,0 +1,6 @@
+;;;  ( SIMPLY SCHEME EXERCISE 17.13 ) Re-write the 'complicated' version of deep-count by 'simplifying it'.
+
+(define (deep-count lst)
+ (cond ((null? lst) 0)
+       ((word? lst) 1)
+       (else (reduce + (map (lambda (item) (deep-count item)) lst)))))

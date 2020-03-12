@@ -1,0 +1,7 @@
+;;;  ( SIMPLY SCHEME EXERCISE 17.14 ) Create a procedure that selects an item from a list of lists with a list of numbers (positions).
+
+(define (branch nums lst)
+  (let ((location (list-ref lst (- (car nums) 1))))
+  (cond ((null? lst) '(no list))
+        ((= (length nums) 1) location)
+        (else (branch (cdr nums) location)))))

@@ -1,0 +1,13 @@
+;;;  ( SIMPLY SCHEME EXERCISE 17.16 ) Write 'valid-infix' where it checks if you have math operations in real-life arrangement.
+
+(define (operator? item) (member? item '(+ / * -)))
+
+(define (valid-infix? lst)
+  (valid-infix-helper 0 lst))
+
+(define (valid-infix-helper n lst)
+  (cond ((null? lst) #t)
+        ((list? (car lst)) (valid-infix-helper 0 (car lst)))
+        ((and (number? (car lst)) (even? n)) (valid-infix-helper (+ n 1) (cdr lst)))
+        ((and (operator? (car lst)) (not (even? n))) (valid-infix-helper (+ n 1) (cdr lst)))
+        (else #f)))
